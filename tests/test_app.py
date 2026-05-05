@@ -14,7 +14,7 @@ def test_home():
     response = client.get("/")
 
     assert response.status_code == 200
-    assert response.json["message"] == "Production Ready CI/CD Flask AppL"
+    assert response.json["message"] == "Production Ready CI/CD Flask App"
 
 
 def test_health():
