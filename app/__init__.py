@@ -8,7 +8,7 @@ def create_app():
     @app.route("/")
     def home():
         return jsonify({
-            "message": "Production Ready CI/CD Flask App"
+            "message": "Production Ready CI/CD Flask App is doing by Lakkireddy"
         }), 200
 
     @app.route("/health")
