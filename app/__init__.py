@@ -2,6 +2,7 @@ import os
 
 from flask import Flask, jsonify
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import text
 
 db = SQLAlchemy()
 
@@ -38,7 +39,7 @@ def create_app():
     @app.route("/db-check")
     def db_check():
         try:
-            db.session.execute("SELECT 1")
+            db.session.execute(text("SELECT 1"))
 
             return jsonify({
                 "database": "connected"
